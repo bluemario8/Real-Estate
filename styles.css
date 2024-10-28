@@ -1,2 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+
+* {
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    padding: 0;
+    margin: 0;
+    transition: 0.4s;
+}
+body {
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    color: #777;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 2.5rem;
+    color: #f69314;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+}
+h4 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.row {
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.justify {
+    display: flex;
+    justify-content: space-between;
+}
+section {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.text-center {
+    width: 100%;
+    text-align: center;
+}
 .header {
+    position: fixed;
+    background-color: #474d52;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);    
+    padding: 0 0;
+}
+.logo {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 24px 0;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-bar li a {
+    color: #999;
+    text-decoration: none;
+    padding: 0 18px;
+    font-size: 16px;
+}
+.nav-bar li a:active,
+.nav-bar li a:hover {
+    color: white;
+}
+.buy-and-sell {
+    display: flex;
+    height: calc(100vh - 60px);
+    background-color: #474d52;
+    align-items: center;
+    justify-content: center;
+}
+.buy-sell-hero {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 500px;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.how-works {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.how-works h2 {
+    margin-bottom: 3rem;
+}
+.how-works span.fas {
+    color: #f69314;
+    font-size: 35px;
+}
+.how-works h4 {
+    color: #343a40;
+    margin-top: 1rem;
+}
+.how-works-in {
+    display: flex;
+    flex-direction: column;
+}
+.row-container {
+    display: flex;
+}
+.row-container div {
+    padding: 0 20px;
+}
+.agents p {
+    margin-bottom: 4rem;
+}
+.large-text {
+    font-size: 1.25rem;
+    font-weight: 300;
 }

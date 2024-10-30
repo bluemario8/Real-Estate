@@ -4,6 +4,9 @@
     font-family: "Roboto", "Helvetica", "Sans-serif";
     padding: 0;
     margin: 0;
+    outline: none;
+}
+*:not(.slick-track):not(.slick-list) {
     transition: 0.4s;
 }
 body {
@@ -43,12 +46,21 @@ h5 {
 p {
     margin: 0 0 1rem 0;
 }
+button.rounded {
+    background-color: #f69314;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    line-height: 1.5;
+    cursor: pointer;
+}
 .large-text {
     font-size: 1.25rem;
     font-weight: 300;
 }
 .row {
-    display: flex;
     width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
@@ -62,9 +74,7 @@ p {
     justify-content: space-between;
 }
 section {
-    display: flex;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 4rem 0;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -73,11 +83,18 @@ section {
     width: 100%;
     text-align: center;
 }
-.header {
+.fas {
+    color: #f69314;
+    font-size: 35px;
+}
+
+
+#header {
     position: fixed;
     background-color: #474d52;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);    
     padding: 0 0;
+    z-index: 3;
 }
 .logo {
     color: white;
@@ -101,7 +118,7 @@ section {
 .nav-bar li a:hover {
     color: white;
 }
-.buy-and-sell {
+#buy-and-sell {
     display: flex;
     height: calc(100vh - 60px);
     background-color: #474d52;
@@ -117,18 +134,14 @@ section {
     text-align: center;
     margin-top: 100px;
 }
-.how-works {
+#how-works {
     background-color: #f8f9fa;
     text-align: center;
 }
-.how-works h2 {
+#how-works h2 {
     margin-bottom: 3rem;
 }
-.how-works span.fas {
-    color: #f69314;
-    font-size: 35px;
-}
-.how-works h4 {
+#how-works h4 {
     color: #343a40;
     margin-top: 1rem;
 }
@@ -142,16 +155,87 @@ section {
 .row-container div {
     padding: 0 20px;
 }
-.agents {
+
+
+#properties {
+    margin: 4rem 0 8rem;
+    position: relative;
+}
+#properties .row {
+    position: relative;
+}
+#properties .row:before {
+    content: "/";
+    position: absolute;
+    right: 80px;
+    top: 10px;
+    color: #999;
+}
+#properties-slider a.slick-arrow {
+    color: black;
+    position: absolute;
+    top: -78px;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-decoration: none; 
+}
+#properties-slider a.slick-prev {
+    right: 80px;
+}
+#properties-slider .slick-slide {
+    padding: 0 15px;
+}
+#properties-slider img {
+    width: 100%;
+    display: block;
+}
+#properties-slider .property-details {
+    padding: 1rem;
+}
+#properties-slider .price {
+    font-size: 1.2rem;
+    color: #343a40;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+}
+#properties-slider .property-details span {
+    font-size: 0.8rem;
+    padding-right: 15px;
+}
+#properties-slider .property-details span.baths {
+    padding-left: 10px;
+}
+#properties-slider .property-details span.sqft {
+    padding-right: 0;
+    padding-left: 10px;
+}
+#properties-slider .property-details span.beds,
+#properties-slider .property-details span.baths {
+    border-right: 1px solid #888;
+}
+#properties-slider .property-details address {
+    font-size: 0.8rem;
+    font-style: normal;
+    margin-top: 0.5rem;
+}
+#properties button.rounded {
+    display: block;
+    margin: 2rem auto 0;
+    width: 350px;
+}
+
+
+#agents {
     margin: 4rem 0 6rem 0;
     padding: 0 0 6rem 0;
     border-bottom: 1px solid #ccc;
 }
-.agents p.large-text {
+#agents p.large-text {
     width: 50%;
     margin-bottom: 4rem;
 }
-.agents .flex {
+#agents .flex {
     flex-wrap: wrap;
 }
 .card {
@@ -162,4 +246,248 @@ section {
 .card h3 {
     font-family: "Playfair Display", serif;
     color: black;
+}
+
+
+#the-best img {
+    width: 47%;
+    height: fit-content;
+}
+#the-best .flex > div {
+    width: 40%;
+}
+#the-best ul {
+    padding-left: 20px;
+    margin-bottom: 4rem;
+}
+#the-best ul li {
+    margin: 10px 0;
+}
+
+
+#services {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+#services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#services .flex {
+    flex-wrap: wrap;
+}
+#services .flex > div {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+#services .flex > div .fas {
+    font-size: 40px;
+    float: left;
+    margin-top: 15px;
+    width: 20%;
+    text-align: center;
+}
+#services .flex > div .services-card-right {
+    float: right;
+    width: 75%;
+}
+#services .flex > div a {
+    color: #f69314;
+    text-decoration: none;
+}
+#services .flex > div a:hover {
+    text-decoration: underline;
+}
+
+
+#testimonials h2 {
+    text-align: center;
+}
+#testimonials-slider .slick-slide {
+    text-align: center;
+}
+#testimonials-slider blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 1rem auto 3rem;
+    max-width: 740px;
+}
+#testimonials-slider .testimonials-caption {
+    width: 200px;
+    margin: 0 auto;
+}
+#testimonials-slider .testimonials-caption img {
+    float: left;
+    border-radius: 30px;
+    width: 60px;
+}
+.testimonials-caption p {
+    position: relative;
+    top: 13px;
+    font-size: 1.2rem;
+}
+#testimonials-slider .slick-arrow {
+    text-decoration: none;
+    position: absolute;
+    font-size: 40px;
+    color: #222;
+    top: 50%;
+    margin-top: -35px;
+}
+#testimonials-slider .slick-next {
+    right: 0;
+}
+
+
+#contact {
+    background: #f8f9fa;
+    padding: 4rem 0 8rem;
+}
+#contact h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#form-container {
+    background: white;
+    width: 58%; 
+    padding: 3rem;
+    box-sizing: border-box;
+}
+#form-container h3 {
+    color: #000;
+    font-family: "Playfair Display", serif;
+    margin-top: 1rem;
+}
+#form-container label {
+    display: block;
+    color: #000;
+    margin-top: 1rem;
+}
+#form-container input,
+#form-container textarea {
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    box-sizing: border-box;
+    height: 43px;
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    font-size: 1rem;
+    color: #495057;
+}
+#form-container textarea {
+    height: 170px;
+    margin-bottom: 2rem;
+    resize: none;
+}
+
+#address-container {
+    background: #fff;
+    width: 38%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: 300px;
+
+}
+#address-container label {
+    display: block;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+#address-container label:first-child {
+    margin-top: 0;
+}
+#address-container address {
+    margin-bottom: 1.5rem;
+    font-style: normal;
+}
+#address-container a {
+    text-decoration: none;
+    color: #f69314;
+}
+#address-container a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background: #333;
+    padding: 8rem 0;
+}
+footer .flex {
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #777;
+}
+footer h5 {
+    color: #fff; 
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+footer ul li {
+    list-style: none;
+}
+.footer-about {
+    width: 47%;
+}
+.footer-about p {
+    width: 65%;
+}
+.footer-quick-links {
+    width: 16%;
+}
+.footer-quick-links ul li {
+    margin-bottom: .5rem;
+}
+.footer-subscribe {
+    width: 35%;
+}
+.subscribe-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.subscribe-container input {
+    border-radius: 30px;
+    height: 43px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    font-size: 1rem;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80%;
+}
+.subscribe-container .right-rounded {
+    background: #f69314;
+    color: #000;
+    font-size: 16px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px 30px 9px;
+    line-height: 1.5;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+}
+.subscribe-container .right-rounded:hover {
+    background: white;
+}
+.footer-subscribe ul li {
+    display: inline-block;
+    padding-right: 2rem;
+}
+.footer-subscribe ul li span:hover {
+    color: white;
+}
+footer small {
+    margin-top: 3rem;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+footer small a {
+    text-decoration: none;
+    color: #777;
 }

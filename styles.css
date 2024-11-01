@@ -93,7 +93,7 @@ section {
     position: fixed;
     background-color: #474d52;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);    
-    padding: 0 0;
+    padding: 1.5rem 0;
     z-index: 3;
 }
 .logo {
@@ -101,7 +101,6 @@ section {
     font-size: 1.7rem;
     font-weight: 800;
     text-decoration: none;
-    padding: 24px 0;
 }
 .nav-bar {
     display: flex;
@@ -117,6 +116,12 @@ section {
 .nav-bar li a:active,
 .nav-bar li a:hover {
     color: white;
+}
+.black-orange li a {
+    color: black;
+}
+.black-orange li a:hover {
+    color: #f69314;
 }
 #buy-and-sell {
     display: flex;
